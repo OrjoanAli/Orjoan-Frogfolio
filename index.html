@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orjoan Frogfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LAYOUT — icons live here -->
+<div class="layout">
+
+  <div class="hero-title">PORTFOLIO<span class="cursor"></span></div>
+
+  <a href="#profile" class="icon-btn" id="icon-profile" onclick="openPopup('profile-popup')">
+    <img src="frogchilling.png" alt="profile" />
+    <span>profile</span>
+  </a>
+
+  <a href="#works" class="icon-btn" id="icon-works" onclick="openPopup('works-popup')">
+    <img src="frogwithstickers.png" alt="works" />
+    <span>works</span>
+  </a>
+
+  <a href="#contact" class="icon-btn" id="icon-contact" onclick="openPopup('contact-popup')">
+    <img src="frogwithplant.png" alt="contact" />
+    <span>volunteering</span>
+  </a>
+
+  <a href="#resume" class="icon-btn" id="icon-resume" onclick="openPopup('resume-popup')">
+    <img src="frogwithcoffee.png" alt="resume" />
+    <span>skills</span>
+  </a>
+
+</div>
+  <!-- END LAYOUT -->
+
+  <!-- SOCIAL BAR — outside layout! -->
+  <div class="social-bar">
+    <a class="social-btn li" href="https://www.linkedin.com/in/orjoan-aldabaibah-9984982b6"  target="_blank" rel="noopener noreferrer">in</a>
+    <a class="social-btn gh" href="https://github.com/OrjoanAli" target="_blank" rel="noopener noreferrer">gh</a>
+    <a class="social-btn be" href="https://www.notion.so/Orjoan-Ali-Aldabaibah-ba7720247600822f90e98187b9174432?source=copy_link" target="_blank" rel="noopener noreferrer">cv</a>
+    <a class="social-btn dr" href="mailto:orjoanaldabaiba@gmail.com" target="_blank" rel="noopener noreferrer">em</a>
+  </div>
+
+<!-- Pop up content    -->
+
+<!-- POPUPS -->
+  <div id="profile-popup" class="popup">
+    <div class="popup-window">
+      <div class="titlebar">
+        <span class="titlebar-path">C:\USER\profile</span>
+        <div class="titlebar-btns">
+          <div class="tb-btn min">─</div>
+          <div class="tb-btn max">□</div>
+          <div class="tb-btn close" onclick="closePopup('profile-popup')">✕</div>
+        </div>
+      </div>
+      <div class="profile-body">
+        <div class="profile-top">
+          <div class="avatar-wrap">🌿</div>
+          <div class="profile-text">
+          <div class="greeting">hi! i'm</div>
+          <div class="name">Orjoan Ali<br>Aldabaibah</div>
+          <div class="role">✦ BIT Student & Web Developer</div>
+          <div class="quote">"Building web solutions and analyzing data to solve real-world problems."</div>
+          </div>
+          </div>
+          <div class="divider"></div>
+          <div class="about-section">
+            <h3>// ABOUT ME</h3>
+            <p>I'm a Business Information Technology student passionate about full-stack web development, data analytics, and creating practical tech solutions. I enjoy coding, solving problems, and contributing to university tech projects and events.</p>
+          </div>
+          <div class="divider"></div>
+          <div class="stats-row">
+            <div class="stat-chip"><span class="num">3+</span><span class="label">Years Exp.</span></div>
+            <div class="stat-chip"><span class="num">6</span><span class="label">Projects</span></div>
+            <div class="stat-chip"><span class="num">2</span><span class="label">Clubs</span></div>
+            <div class="stat-chip"><span class="num">∞</span><span class="label">Coffee ☕</span></div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="works-popup" class="popup">
+    <div class="popup-window">
+      <div class="titlebar">
+        <span class="titlebar-path">C:\USER\works</span>
+        <div class="titlebar-btns">
+          <div class="tb-btn min">─</div>
+          <div class="tb-btn max">□</div>
+          <div class="tb-btn close" onclick="closePopup('works-popup')">✕</div>
+        </div>
+      </div>
+      <div class="profile-body">
+        <div class="about-section">
+          <h3>// MY WORKS</h3>
+            <p>🌐 <a href="https://github.com/OrjoanAli/lost-and-found-system" target="_blank">Lost and Found Reporting System</a></p>
+            <p>🌐 <a href="https://github.com/OrjoanAli/solartec-sustainable-store" target="_blank">Sustainable Energy Devices Website</a></p>
+            <p>🌐 <a href="https://github.com/OrjoanAli/Codeescape-IEEE-Competition" target="_blank">Codescape Event Website — IEEE</a></p>
+            <p>📊 <a href="https://fisjo.sharepoint.com/sites/HealthKnowledgeHubCityGeneralHospital" target="_blank">Knowledge Management System — Health Company</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact-popup" class="popup">
+    <div class="popup-window">
+      <div class="titlebar">
+        <span class="titlebar-path">C:\USER\VOLUNTEERING</span>
+        <div class="titlebar-btns">
+          <div class="tb-btn min">─</div>
+          <div class="tb-btn max">□</div>
+          <div class="tb-btn close" onclick="closePopup('contact-popup')">✕</div>
+        </div>
+      </div>
+      <div class="profile-body">
+        <div class="about-section">
+          <h3>// VOLUNTEERING JOURNEY</h3>
+          <p>🐧 <strong>Linux Society — PR Team Member</strong><br>Oct 2023 – Oct 2024</p>
+          <p>🐧 <strong>Linux Society — PR Events Supervisor</strong><br>Oct 2024 – Oct 2025</p>
+          <p>💻 <strong>IEEE Computer Society — Geeks Team Member</strong><br>Jan 2024 – Jan 2025</p>
+          <p>💻 <strong>IEEE Computer Society — Geeks Sub-Secretary</strong><br>Feb 2025 – Oct 2025</p>
+          <p>🏆 <strong>Hult Prize — Organizer</strong><br>University of Jordan</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="resume-popup" class="popup">
+    <div class="popup-window">
+      <div class="titlebar">
+        <span class="titlebar-path">C:\USER\skills</span>
+        <div class="titlebar-btns">
+          <div class="tb-btn min">─</div>
+          <div class="tb-btn max">□</div>
+          <div class="tb-btn close" onclick="closePopup('resume-popup')">✕</div>
+        </div>
+      </div>
+      <div class="profile-body">
+        <div class="about-section">
+          <h3>// MY SKILLS</h3>
+            <p>💻 HTML, CSS, PHP, JavaScript</p>
+            <p>🗄️ MySQL, Database Design</p>
+            <p>📊 Python, Pandas, Power BI</p>
+            <p>🐧 Linux, Open Source Tools</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
