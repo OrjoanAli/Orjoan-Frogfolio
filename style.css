@@ -406,3 +406,14 @@ body {
   background: var(--window-bg);
   animation: fadeDown 0.2s ease both;
 }
+
+.social-btn img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.social-btn.li {
+  background: transparent;
+  border: none;
+}
