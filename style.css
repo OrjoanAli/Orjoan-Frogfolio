@@ -65,7 +65,7 @@
   #icon-profile { top: 20px;  left: 10px; }
   #icon-works   { top: 320px; left: 10px; }
   #icon-contact { top: 20px;  right: 10px; }
-  #icon-resume  { top: 320px; right: 10px; }
+  #icon-resume  { top: 320px; right: 20px; }
 
   /* shrink hero title */
   .hero-title {
