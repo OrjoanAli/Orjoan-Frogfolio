@@ -134,8 +134,8 @@ body {
   top: 260px;
   left: 27%;
   bottom: 50px;
-  /*transfom: translateX(-50%);
-  white-space: nowrap;*/
+  transfom: translateX(-50%);
+  /*white-space: nowrap;*/
 }
 
 /* ── LAYOUT: this is the desktop area ── */
