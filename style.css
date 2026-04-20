@@ -67,13 +67,13 @@
   #icon-contact { top: 20px;  right: 10px; }
   #icon-resume  { top: 320px; right: 20px; }
 
-  /* shrink hero title */
+  /* shrink hero title 
   .hero-title {
     font-size: 1.2rem;
     top: 180px;
     left: 27%;
     transform: translateX(-50%);
-  }
+  }*/
 
   /* shrink social bar */
   .social-bar {
