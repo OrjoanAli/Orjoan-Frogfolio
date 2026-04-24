@@ -99,10 +99,10 @@ body {
 }
 
 /* ── ICON POSITIONS ── */
-#icon-profile { top: 20px;  left: 60px; }
-#icon-contact { top: 20px;  right: 60px; }
-#icon-works   { top: 340px; left: 100px; }
-#icon-resume  { top: 340px; right: 100px; }
+#icon-profile { top: 20px;  left: 0px; }
+#icon-contact { top: 20px;  right: 0px; }
+#icon-works   { top: 340px; left: 0px; }
+#icon-resume  { top: 340px; right: 0px; }
 
 /* ── TITLE BAR ── */
 .titlebar {
