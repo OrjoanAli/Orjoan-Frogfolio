@@ -1,91 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
 
-@media (max-width: 768px) {
-
-  .layout {
-    min-height: 750px;
-    max-width: 100%;
-  }
-
-  .icon-btn img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .icon-btn {
-  -webkit-tap-highlight-color: transparent;
-}
-
-  #icon-profile { top: 20px;  left: 10px; }
-  #icon-works   { top: 520px; left: 10px; }
-  #icon-contact { top: 20px;  right: 10px; }
-  #icon-resume  { top: 520px; right: 10px; }
-
-  .hero-title {
-    font-size: 1.2rem !important;
-    top: 300px !important; 
-    left: 50% !important;
-    bottom: auto !important;
-    transform: translateX(-50%) !important;
-    white-space: nowrap !important;
-  }
-
-  .social-bar {
-    width: 90% !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    gap: 16px !important;
-  }
-
-  .popup-window {
-    width: 90%;
-  }
-
-    .layout {
-    padding-top: 0 !important;
-    margin-top: -50px !important;
-  }
-
-  body {
-    padding: 0px 10px 100px !important;
-    overflow: hidden;
-  }
-
-  .icon-btn {
-  gap: -80px !important;
-}
-.icon-btn span {
-  margin-top: -50px !important;
-}
-
-}
-
-
-  /* reposition icons for mobile */
-  #icon-profile { top: 20px;  left: 10px; }
-  #icon-works   { top: 320px; left: 10px; }
-  #icon-contact { top: 20px;  right: 10px; }
-  #icon-resume  { top: 320px; right: 20px; }
-
-  /* shrink hero title 
-  .hero-title {
-    font-size: 1.2rem;
-    top: 180px;
-    left: 27%;
-    transform: translateX(-50%);
-  }*/
-
-  /* shrink social bar */
-  .social-bar {
-    width: 90%;
-    gap: 16px;
-  }
-
-  /* shrink popups */
-  .popup-window {
-    width: 90%;
-  }
-
 :root {
   --bg: #d8ecd8;
   --grid: #b8d8b8;
@@ -116,9 +30,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px 60px;
-  gap: 40px;
-   overflow: hidden !important;
+  padding: 40px 20px 100px;
+  overflow: hidden;
 }
 
 /* ── HERO TITLE ── */
@@ -128,59 +41,68 @@ body {
   color: var(--green-dark);
   letter-spacing: 6px;
   text-align: center;
-  text-shadow: 3px 3px 0 var(--green-light), 6px 6px 0 rgba(74,124,89,0.15);
+  text-shadow:
+    3px 3px 0 var(--green-light),
+    6px 6px 0 rgba(74,124,89,0.15),
+    0 0 40px rgba(106,171,122,0.25);
   animation: fadeDown 0.8s ease both;
   position: absolute;
-  top: 260px;
-  left: 27%;
-  bottom: 50px;
-  transfom: translateX(-50%);
-  /*white-space: nowrap;*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  pointer-events: none;
 }
 
-/* ── LAYOUT: this is the desktop area ── */
+/* ── LAYOUT ── */
 .layout {
   position: relative;
   width: 100%;
-  max-width: 1100px;   /* ← TOTAL WIDTH of the whole area */
-  min-height: 880px;
+  max-width: 1100px;
+  min-height: 620px;
   animation: fadeUp 0.9s ease 0.2s both;
 }
 
 /* ── ICON BUTTONS ── */
 .icon-btn {
-  position: absolute;        /* free positioning! */
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   cursor: pointer;
   text-decoration: none;
-  transition: transform 0.15s;
+  transition: transform 0.2s cubic-bezier(.34,1.56,.64,1);
 }
-.icon-btn:hover { transform: scale(1.12); }
+.icon-btn:hover { transform: scale(1.08) translateY(-6px); }
 
 .icon-btn img {
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(74,124,89,0.18));
+  transition: filter 0.2s;
+}
+.icon-btn:hover img {
+  filter: drop-shadow(0 14px 28px rgba(74,124,89,0.32));
 }
 
 .icon-btn span {
   font-family: 'VT323', monospace;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--green-dark);
-  background: rgba(168, 212, 168, 0.7);
-  padding: 1px 5px;
-  border-radius: 3px;
+  background: rgba(168, 212, 168, 0.75);
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(74,124,89,0.15);
+  letter-spacing: 0.05em;
 }
 
-/* ── ICON POSITIONS — just change top/left/right to move each one ── */
-#icon-profile { left:0; }
-#icon-works   { top: 300px; left: 50px;  }
-#icon-contact { right: 50px; }
-#icon-resume  { top: 300px; right: 0px; }
-
+/* ── ICON POSITIONS ── */
+#icon-profile { top: 20px;  left: 60px; }
+#icon-contact { top: 20px;  right: 60px; }
+#icon-works   { top: 340px; left: 100px; }
+#icon-resume  { top: 340px; right: 100px; }
 
 /* ── TITLE BAR ── */
 .titlebar {
@@ -217,13 +139,11 @@ body {
   flex-direction: column;
   gap: 20px;
 }
-
 .profile-top {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-
 .avatar-wrap {
   flex-shrink: 0;
   width: 90px; height: 90px;
@@ -235,12 +155,7 @@ body {
   display: flex; align-items: center; justify-content: center;
   font-size: 2.5rem;
 }
-
-.avatar-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+.avatar-wrap img { width: 100%; height: 100%; object-fit: cover; }
 
 .profile-text .greeting {
   font-family: 'Press Start 2P', monospace;
@@ -331,42 +246,47 @@ body {
 /* ── SOCIAL BAR ── */
 .social-bar {
   background: var(--green-dark);
-  width: 900px;
-  border-radius: 12px;
-  padding: 14px 24px;
+  width: auto;
+  border-radius: 16px;
+  padding: 14px 48px;
   display: flex;
   justify-content: center;
-  gap: 100px;
-  box-shadow: 4px 4px 0 rgba(74,124,89,0.4);
+  align-items: center;
+  gap: 40px;
+  box-shadow:
+    4px 4px 0 rgba(74,124,89,0.4),
+    0 8px 32px rgba(74,124,89,0.2);
+  border-top: 1px solid rgba(255,255,255,0.08);
   animation: fadeUp 0.9s ease 0.4s both;
-  position: fixed;        /* ✅ */
-  bottom: 20px;           /* ✅ */
-  transform: translateX(-50%); /* ✅ center */
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
 }
 
 .social-btn {
-  width: 46px; height: 46px;
+  width: 50px; height: 50px;
   border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
   cursor: pointer;
-  border: 2px solid rgba(255,255,255,0.3);
-  transition: transform 0.15s, box-shadow 0.15s;
+  border: none;
+  transition: transform 0.2s cubic-bezier(.34,1.56,.64,1), box-shadow 0.2s;
   text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 0.55rem;
+  background: transparent;
 }
-.social-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 0 rgba(0,0,0,0.3); }
-.social-btn.li { background: #0a66c2; }
-.social-btn.gh { background: #24292e; }
-.social-btn.be { background: #1769ff; }
-.social-btn.dr { background: #ea4c89; }
+.social-btn img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.social-btn:hover { transform: translateY(-6px) scale(1.1); }
 
 /* ── ANIMATIONS ── */
 @keyframes fadeDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translate(-50%, calc(-50% - 20px)); }
+  to   { opacity: 1; transform: translate(-50%, -50%); }
 }
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
@@ -390,7 +310,8 @@ body {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
   justify-content: center;
   align-items: center;
   z-index: 999;
@@ -402,18 +323,58 @@ body {
   border: 2.5px solid var(--window-border);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 5px 5px 0 var(--green-dark), 8px 8px 0 rgba(74,124,89,0.2);
+  box-shadow:
+    5px 5px 0 var(--green-dark),
+    8px 8px 0 rgba(74,124,89,0.2),
+    0 20px 60px rgba(0,0,0,0.15);
   background: var(--window-bg);
-  animation: fadeDown 0.2s ease both;
+  animation: popIn 0.25s cubic-bezier(.34,1.56,.64,1) both;
+}
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
-.social-btn img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-}
-
-.social-btn.li {
-  background: transparent;
-  border: none;
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  body {
+    padding: 20px 10px 110px !important;
+    overflow: hidden;
+  }
+  .layout {
+    min-height: 700px;
+    max-width: 100%;
+    margin-top: -20px;
+  }
+  .icon-btn img {
+    width: 120px;
+    height: 120px;
+  }
+  .icon-btn {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .icon-btn span {
+    margin-top: 0 !important;
+  }
+  #icon-profile { top: 20px;  left: 10px; }
+  #icon-contact { top: 20px;  right: 10px; }
+  #icon-works   { top: 480px; left: 10px; }
+  #icon-resume  { top: 480px; right: 10px; }
+  .hero-title {
+    font-size: 1.1rem !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    white-space: nowrap !important;
+  }
+  .social-bar {
+    width: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    gap: 16px !important;
+    padding: 12px 24px !important;
+  }
+  .popup-window {
+    width: 92%;
+  }
 }
