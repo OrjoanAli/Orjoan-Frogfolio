@@ -77,8 +77,8 @@ body {
 .icon-btn:hover { transform: scale(1.08) translateY(-6px); }
 
 .icon-btn img {
-  width: 220px;
-  height: 220px;
+  width: 300px;
+  height: 300px;
   object-fit: contain;
   filter: drop-shadow(0 8px 16px rgba(74,124,89,0.18));
   transition: filter 0.2s;
@@ -101,8 +101,8 @@ body {
 /* ── ICON POSITIONS ── */
 #icon-profile { top: 20px;  left: 0px; }
 #icon-contact { top: 20px;  right: 0px; }
-#icon-works   { top: 340px; left: 0px; }
-#icon-resume  { top: 340px; right: 0px; }
+#icon-works   { top: 360px; left: 30px; }
+#icon-resume  { top: 360px; right: 30px; }
 
 /* ── TITLE BAR ── */
 .titlebar {
