@@ -177,6 +177,19 @@ body {
   margin-top: 4px;
   font-family: 'Courier Prime', monospace;
 }
+.grad-badge {
+  display: inline-block;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 1px;
+  color: var(--green-dark);
+  background: var(--green-light);
+  border: 1px solid var(--green-mid);
+  border-radius: 10px;
+  padding: 2px 8px;
+  vertical-align: middle;
+  margin-left: 6px;
+}
 .profile-text .quote {
   font-style: italic;
   font-size: 0.78rem;
@@ -209,6 +222,9 @@ body {
   font-size: 0.88rem;
   line-height: 1.75;
   color: #3a5a3a;
+}
+.about-section p strong {
+  color: var(--green-dark);
 }
 
 /* ── STATS ROW ── */
