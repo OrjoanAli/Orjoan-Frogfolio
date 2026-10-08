@@ -59,7 +59,8 @@ body {
   position: relative;
   width: 100%;
   max-width: 1100px;
-  min-height: 620px;
+  height: calc(100vh - 140px);
+  min-height: 0;
   animation: fadeUp 0.9s ease 0.2s both;
 }
 
@@ -77,8 +78,8 @@ body {
 .icon-btn:hover { transform: scale(1.08) translateY(-6px); }
 
 .icon-btn img {
-  width: 270px;
-  height: 270px;
+  width: min(270px, 27vh);
+  height: min(270px, 27vh);
   object-fit: contain;
   filter: drop-shadow(0 8px 16px rgba(74,124,89,0.18));
   transition: filter 0.2s;
@@ -99,10 +100,10 @@ body {
 }
 
 /* ── ICON POSITIONS ── */
-#icon-profile { top: 30px;  left: 0px; }
-#icon-contact { top: 30px;  right: 0px; }
-#icon-works   { top: 360px; left: 30px; }
-#icon-resume  { top: 360px; right: 30px; }
+#icon-profile { top: 0;    left: 0; }
+#icon-contact { top: 0;    right: 0; }
+#icon-works   { bottom: 0; top: auto; left: 30px; }
+#icon-resume  { bottom: 0; top: auto; right: 30px; }
 
 /* ── TITLE BAR ── */
 .titlebar {
@@ -380,8 +381,8 @@ body {
   }
   #icon-profile { top: 20px;  left: 10px; }
   #icon-contact { top: 20px;  right: 10px; }
-  #icon-works   { top: 480px; left: 10px; }
-  #icon-resume  { top: 480px; right: 10px; }
+  #icon-works   { bottom: 0; top: auto; left: 10px; }
+  #icon-resume  { bottom: 0; top: auto; right: 10px; }
   .hero-title {
     font-size: 1.1rem !important;
     top: 50% !important;
