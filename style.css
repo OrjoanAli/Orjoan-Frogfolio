@@ -31,7 +31,8 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 40px 20px 100px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* ── HERO TITLE ── */
@@ -359,45 +360,73 @@ body {
 }
 
 /* ── MOBILE ── */
+
 @media (max-width: 768px) {
   body {
-    padding: 20px 10px 110px !important;
-    overflow: hidden;
+    padding: 20px 10px 130px;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
+
   .layout {
-    min-height: 700px;
-    max-width: 100%;
-    margin-top: -20px;
+    height: auto;
+    min-height: 750px;
+    margin-top: 0;
   }
+
   .icon-btn img {
-    width: 120px;
-    height: 120px;
+    width: clamp(75px, 22vw, 120px);
+    height: clamp(75px, 22vw, 120px);
   }
-  .icon-btn {
-    -webkit-tap-highlight-color: transparent;
+
+  #icon-profile {
+    top: 20px;
+    left: 5px;
   }
-  .icon-btn span {
-    margin-top: 0 !important;
+
+  #icon-contact {
+    top: 20px;
+    right: 5px;
   }
-  #icon-profile { top: 20px;  left: 10px; }
-  #icon-contact { top: 20px;  right: 10px; }
-  #icon-works   { bottom: 0; top: auto; left: 10px; }
-  #icon-resume  { bottom: 0; top: auto; right: 10px; }
+
+  #icon-works {
+    top: auto;
+    bottom: 20px;
+    left: 5px;
+  }
+
+  #icon-resume {
+    top: auto;
+    bottom: 20px;
+    right: 5px;
+  }
+
   .hero-title {
-    font-size: 1.1rem !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    white-space: nowrap !important;
+    width: 90%;
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
+    line-height: 1.7;
+    letter-spacing: 2px;
+    white-space: normal;
   }
+
   .social-bar {
-    width: auto !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    gap: 16px !important;
-    padding: 12px 24px !important;
+    width: calc(100% - 24px);
+    max-width: 400px;
+    gap: clamp(12px, 4vw, 20px);
+    padding: 10px 12px;
+    bottom: 10px;
   }
+
+  .social-btn,
+  .social-btn img {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
   .popup-window {
     width: 92%;
+    max-height: 85vh;
+    overflow-y: auto;
   }
 }
