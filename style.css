@@ -361,72 +361,76 @@ body {
 
 /* ── MOBILE ── */
 
+
 @media (max-width: 768px) {
   body {
-    padding: 20px 10px 130px;
-    overflow-x: hidden;
-    overflow-y: auto;
+    height: 100dvh;
+    min-height: 0;
+    padding: 12px;
+    overflow: hidden;
   }
 
   .layout {
-    height: auto;
-    min-height: 750px;
-    margin-top: 0;
+    width: 100%;
+    height: calc(100dvh - 100px);
+    min-height: 0;
+    margin: 0;
   }
 
   .icon-btn img {
-    width: clamp(75px, 22vw, 120px);
-    height: clamp(75px, 22vw, 120px);
+    width: clamp(65px, 19vw, 100px);
+    height: clamp(65px, 19vw, 100px);
   }
 
   #icon-profile {
-    top: 20px;
-    left: 5px;
+    top: 8%;
+    left: 5%;
   }
 
   #icon-contact {
-    top: 20px;
-    right: 5px;
+    top: 8%;
+    right: 5%;
   }
 
   #icon-works {
     top: auto;
-    bottom: 20px;
-    left: 5px;
+    bottom: 8%;
+    left: 5%;
   }
 
   #icon-resume {
     top: auto;
-    bottom: 20px;
-    right: 5px;
+    bottom: 8%;
+    right: 5%;
   }
 
   .hero-title {
     width: 90%;
-    font-size: clamp(0.8rem, 4vw, 1.2rem);
-    line-height: 1.7;
-    letter-spacing: 2px;
+    font-size: clamp(0.75rem, 3.5vw, 1.1rem);
+    line-height: 1.8;
+    letter-spacing: 1px;
     white-space: normal;
   }
 
   .social-bar {
     width: calc(100% - 24px);
-    max-width: 400px;
+    max-width: 360px;
+    left: 50%;
+    bottom: 8px;
+    padding: 8px 12px;
     gap: clamp(12px, 4vw, 20px);
-    padding: 10px 12px;
-    bottom: 10px;
+    justify-content: center;
   }
 
   .social-btn,
   .social-btn img {
-    width: 36px;
-    height: 36px;
-    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
   }
 
   .popup-window {
     width: 92%;
-    max-height: 85vh;
+    max-height: 85dvh;
     overflow-y: auto;
   }
 }
